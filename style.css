@@ -1,28 +1,140 @@
-.album {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 8px;
+@charset "UTF-8";
+/* Indstiller tegnsætning til UTF-8 for korrekt håndtering af specialtegn */
+
+body, html {
+  background-image: -webkit-linear-gradient(top, #cccccc 0%, #ffffff 100%);
+  /* Tilføjer en gradient baggrund fra grå til hvid */
+  background-repeat: no-repeat;
+  /* Sikrer, at baggrunden ikke gentages */
+  color: #666666;
+  /* Standard tekstfarve */
+  font: 22px Arial, Tahoma, sans-serif;
+  /* Skrifttype og størrelse */
+  text-align: center;
+  /* Centrerer tekst som standard */
+  position: relative;
+  /* Giver mulighed for placering af børn ift. forældre. Det smarte så ting kan være ved siden af hinanden på siden. */
+  margin: 0;
+  /* Fjerner standard margin */
+  padding: 0;
+  /* Fjerner standard padding */
+  box-sizing: border-box;
+  /* Inkluder padding og border i elementets samlede størrelse */
+  min-height: 100%;
+  /* Sikrer fuld sidehøjde */
 }
 
-h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+/* Flexbox layout for body */
+body {
+    display: flex;
+    /* Aktiverer flexbox */
+    flex-direction: column; 
+    /* Lader elementerne stables vertikalt */
+    min-height: 100vh;
+    /* Sikrer, at body fylder hele viewport-højden */
+  }
+
+#main-content-area {
+  background-image: -webkit-linear-gradient(bottom, #cccccc 0%, #ffffff 100%);
+  /* Tilføjer en gradient baggrund */
+  background-repeat: no-repeat;
+  /* Undgår gentagelse af baggrunden */
+  border: 1px solid #dddddd;
+  /* Lysegrå kant */
+  margin: 30px auto;
+  /* Centrerer og tilføjer mellemrum */
+  padding: 20px;
+  /* Tilføjer indre afstand */
+  text-align: left;
+  /* Venstrejusterer tekst */
+  width: 75%;
+  /* Sætter bredde til 75% af forældreelementet */
+  flex: 1;
+  /* Lader området udvide sig for at fylde tilgængelig plads */
 }
 
-button {
-    padding: 5px 10px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
+.albumName {
+  font-size: 17px;
+  /* Skriftstørrelse for albumnavn */
+  display: inline-block;
+  /* Viser elementer side om side */
+  margin-top: 5rem;
+  /*rem er noget fin noget, som min svigerfar har vidst mig. Det er "a unit of measurement that represents the font size of the root element". Vi synes det var sjovt at prøve af */
+  width: 45%;
+  /* Sætter bredde til 45% af forældreelementet */
+  vertical-align: middle;
+  /* Justerer vertikal position */
 }
 
-button:hover {
-    background-color: #0056b3;
+h1{
+  margin: 7px 0px 3px;
+  /* Justerer afstand omkring overskrifter */
 }
 
-ul {
-    margin-top: 10px;
+.artistName {
+  font-size: 15px;
+  /* Skriftstørrelse */
+  color: #000000;
+  /* Tekstfarve */
+  background-color: #ffffff;
+  /* Baggrundsfarve */
+  padding: 20px;
+  /* Indre afstand */
+  margin: 0 0px 0;
+  /* Margin - inkonsistent kan forbedres */
 }
+
+.productionYear,
+.website {
+  font-size: 15px;
+  /* Skriftstørrelse */
+  text-align: left;
+  /* Venstrejustering */
+  margin: 0 0px 0;
+}
+
+.website {
+  font-style: italic;
+  /* Kursiv tekst */
+  color: blue;
+  /* Farve for links i normal */
+}
+
+
+p {
+  padding: 0 0px 5px;
+  /* Indre afstand under tekst */
+}
+
+a:visited {
+  color: darkblue;
+  /* Farve for links besøgt tilstand */
+}
+
+a:hover,
+a:active {
+  color: #1d85be;
+  /* Ændrer farve, når links hover eller aktiveres */
+}
+
+img{
+    width: 200px;
+    /* Sætter fast bredde */
+    height: 200px;
+    /* Sætter fast højde */
+}
+
+footer {
+    background-color: white;
+    /* Hvid baggrund */
+    color: black;
+    /* Sort tekst */
+    text-align: center;
+    /* Centrerer tekst */
+    padding: 10px 0;
+    /* Indre afstand ovenfor og nedenfor */
+    margin-top: 20px; 
+    /* Tilføjer mellemrum over min footer */
+    text-align-last: center;
+    /* Centrerer sidste linje af tekst i footeren */
+  }
