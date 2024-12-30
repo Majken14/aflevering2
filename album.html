@@ -1,0 +1,18 @@
+class Album {
+    constructor(title, artist, releaseYear, tracklist) {
+        this.title = title;
+        this.artist = artist;
+        this.releaseYear = releaseYear;
+        this.tracklist = tracklist;
+    }
+
+    // Metode til at vise detaljer om albummet
+    getDetails() {
+        return `${this.title} by ${this.artist} (Released: ${this.releaseYear})`;
+    }
+
+    // Metode til at vise tracklisten
+    getTracklist() {
+        return this.tracklist.map(track => track.name).join(', ');
+    }
+}
